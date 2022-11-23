@@ -132,15 +132,15 @@ app.post('/clientSuggestions', async function(req,res){
     let theFilter = await db.findAreaByName(town)
   
     if (!town) {
-      req.flash('info', 'Please Select Town')
+      req.flash('info', 'Please Select Town For a suggestion')
     }
 
     if(!1 || 2 || 3 ||4 ){
       req.flash('info', 'There are no suggestions for the town selected')
     }
 
-    res.render("suggest", {
-      
+    res.render("products", {
+      theFilter
     })
 
 })
