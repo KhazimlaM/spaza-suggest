@@ -1,0 +1,51 @@
+<body>
+
+    <form action="/login" method="post">
+
+
+        <div>
+            <div class="container">
+                <div class="row">
+
+                        <h1 class="title"> SPAZA SHOP </h1>
+                   
+                        <h1 class="title">SUGGEST</h1>
+                </div>
+            </div>
+            <div class="container">
+
+                {{#if messages.error}}
+                <div style="height:25px ;" class="messages">
+                    <h3 style="color:red; font-size:30px " class="messages">{{messages.error}}</h3>
+                </div>{{/if}}
+
+            </div>
+
+        </div>
+        <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="texInput">
+                        <input type="text" name="code" style="color:black ; class=" names" placeholder=" Code">
+
+                        <button type="submit" class="btn" value="LOGIN">LOGIN</button>
+                      
+    </form>
+
+    <form>
+        <br>
+        <a href="/signup"><p style="color: red;">Sign Up</p></a>
+        
+        <br>
+    </form>
+
+
+
+ 
+
+   
+</body>
+
+
+</html>

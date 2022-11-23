@@ -67,10 +67,6 @@ export default function SpazaSuggest (db){
         return spaza;
     }
     
-    // show all the suggestions for a given area
-    // function suggestionsForArea(areaId) {
-    //     ``
-    // }
     
     async function alreadyAcceptedSuggestionForSpaza(suggestionId, spazaId) {
         const count = await db.one(`select count(*) from accepted_suggestion where suggestion_id = $1 and spaza_id = $2`,

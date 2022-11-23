@@ -1,0 +1,59 @@
+<body>
+
+
+    <form action="/signup" method="post">
+
+        <div>
+            <div class="container">
+                <div class="row">
+
+                        <h1 class="title"> SPAZA SHOP </h1>
+                    
+                        <h1 class="title">SUGGEST</h1>
+                    
+                    {{#if messages.erro}}
+                    <div style="height:25px ;" class="messages">
+                        <h3 style="color:rgb(241, 94, 94); font-size:30px " class="messages">{{messages.error}}</h3>
+                    </div>{{/if}}
+                    {{#if messages.info}}
+                    <div style="height:25px ;" class="massages">
+                        <h3 style="color:rgb(39, 83, 39); font-size:30px " class="messages">{{messages.info}}</h3>
+                    </div>{{/if}}
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="texInput">
+                        <input type="text" name="name" style="color:black ;" class="names" placeholder="name">
+
+                    </div>
+
+                </div>
+               
+            </div>
+
+        </div>
+        <br>
+        <div>
+
+            <div class="container">
+                <div class="row">
+                   
+                    <div class="texInput">
+
+                        <button type="" class="btn" value="LOGIN">Sign Up</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="container" >
+            <a href="/" rel="noopener noreferrer"><button type="" class="btn" value="">HOME</button></a>
+       
+    </div>
+
+   
+</body>

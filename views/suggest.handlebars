@@ -1,0 +1,97 @@
+
+    <body style="background-color:rgb(80, 146, 63);">
+    
+    <br>
+    <br>
+    
+
+    <br><br>
+    <div class="center" style="font-size:45px ;">Please select the town of Spaza Shop for product suggestion</div>
+    <br><br>
+
+    <form action="/clientSuggestions" method="post">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+
+                  <div>
+
+                    <input type="checkbox" name="town" value="Khayelitsha B" id="Khayelitsha B" {{Mondays}}/>
+                    <label for="Khayelitsha B" class="">Khayelitsha B</label>
+                 </div>
+                <div class="">
+                    <input type="checkbox" name="town" value="Khayelitsha C" id="Khayelitsha C" {{Tuesday}}/>
+                    <label for="Khayelitsha C" class="">Khayelitsha C</label>
+                </div>
+                <div class="">
+                    <input type="checkbox" name="town" value="Khayelitsha M" id="Khayelitsha M" {{Wednesday}}/>
+                    <label for="Khayelitsha M" class="">Khayelitsha M</label>
+                </div>
+                <div class="">
+                    <input type="checkbox" name="town" value="Nyanga" id="Nyanga" {{Thursday}}/>
+                    <label for="Nyanga" class="">Nyanga</label>
+                </div>
+                <div class="">
+                    <input type="checkbox" name="town" value="Nyanga East" id="Nyanga East" {{Friday}}/>
+                    <label for="Nyanga East" class="">Nyanga East</label>
+                </div>
+               
+                </div>
+
+            </div>
+<br>
+          
+ <div class="center" style="font-size:45px ;">Please select the product you would like to suggest for the town  </div>
+
+   	<form action="/filter" method="post">
+				<br>
+				<br>
+				<label class="">
+					<input type="radio" name="town" class="radio-button" value="3">
+					<span class="label-body">Bread</span>
+				</label>
+				<label class="">
+					<input type="radio" name="town" class="radio-button" value="2">
+					<span class="label-body">Tomato Sauce</span>
+				</label>
+				<label class="">
+					<input type="radio" name="town" class="radio-button" value="1">
+					<span class="label-body">Banana Loaf</span>
+				</label>
+				<label class="">
+					<input type="radio" name="town" class="radio-button" value="4">
+					<span class="label-body">Doritos</span>
+				</label>
+                
+
+
+
+		</div>
+		<br>
+
+        <br><br>
+        <div class="container">
+            <div class="row">
+
+                <div class="">
+                    <a href=""><button type="" class="btn" value="SUBMIT">SUBMIT</button></a>
+
+                </div>
+<br>
+<br>
+                 <div class="">
+                    <a href=""><button type="" class="btn" value="SUBMIT">SHOW SUGGESTIONS</button></a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+</body>
