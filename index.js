@@ -77,25 +77,37 @@ app.get('/suggest/:name',async function(req,res){
     })
 })
 
+app.post('/suggest/:name',async function(req,res){
+
+    let theCode = req.body.code
+    let mySuggestion = await mySpaza.clientLogin(theCode)
+
+    res.render('suggest',{
+        theCode,
+        mySuggestion
+    })
+})
+
 app.post('/login', async function (req, res) {
 
     let theCode = req.body.code
    
     let check = await mySpaza.clientLogin(theCode)
 
+          let myAreas = await mySpaza.areas()
 
-
-    if (check) {
-
+        res.render('suggest', {
+            theCode,
+            myAreas
+            
+        })
        
-        res.redirect(`/suggest/${theCode}`)
+    // } else  {
        
-    } else  {
-       
-        req.flash('error', 'Enter a valid code please');
-        res.redirect('/')
+    //     req.flash('error', 'Enter a valid code please');
+    //     res.redirect('/')
 
-    }
+    // }
 })
 
 app.post('/signup', async function(req,res){
@@ -139,9 +151,7 @@ app.post('/clientSuggestions', async function(req,res){
       req.flash('info', 'There are no suggestions for the town selected')
     }
 
-    res.render("products", {
-      theFilter
-    })
+    res.render("products")
 
 })
 
